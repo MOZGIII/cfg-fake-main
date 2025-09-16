@@ -50,6 +50,7 @@ pub fn cfg_(attr: TokenStream, item: TokenStream) -> TokenStream {
 
             #![feature(prelude_import)]
             #![allow(internal_features)]
+            #![allow(missing_docs)]
 
             #[macro_use]
             extern crate std;
