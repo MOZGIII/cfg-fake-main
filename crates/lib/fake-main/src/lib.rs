@@ -7,6 +7,19 @@ use proc_macro::TokenStream;
 
 /// The macro that does what `cfg` does but also injects a fake `fn main` when
 /// the predicate is `false`.
+///
+/// # Usage
+///
+/// ```ignore
+/// # #[allow(clippy::needless_doctest_main)]
+/// #![feature(prelude_import)]
+/// #![feature(custom_inner_attributes)]
+/// #![::fake_main::cfg_(not(feature = "skip"))]
+///
+/// fn main() {
+///    println!("Real fn main");
+/// }
+/// ```
 #[proc_macro_attribute]
 pub fn cfg_(attr: TokenStream, item: TokenStream) -> TokenStream {
     let attr = proc_macro2::TokenStream::from(attr);
