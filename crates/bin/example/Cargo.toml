@@ -1,0 +1,11 @@
+[package]
+name = "example"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+fake-main = { path = "../../lib/fake-main" }
+
+[features]
+skip = []
