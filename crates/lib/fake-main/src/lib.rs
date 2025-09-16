@@ -1,4 +1,5 @@
-//! The [`cfg_fake_main`] macro..
+//! The cfg fake main macro.
+
 #![feature(proc_macro_expand)]
 
 extern crate proc_macro;
