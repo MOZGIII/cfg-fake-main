@@ -1,18 +1,5 @@
 [licenses]
-allow = [
-  "0BSD",
-  "Apache-2.0 WITH LLVM-exception",
-  "Apache-2.0",
-  "BSD-2-Clause",
-  "BSD-3-Clause",
-  "CC0-1.0",
-  "ISC",
-  "MIT",
-  "MPL-2.0",
-  "OpenSSL",
-  "Unlicense",
-  "Unicode-3.0",
-]
+allow = ["Apache-2.0", "MIT", "Unicode-3.0"]
 
 [[licenses.clarify]]
 name = "ring"
