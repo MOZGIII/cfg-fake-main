@@ -46,6 +46,8 @@ pub fn cfg_(attr: TokenStream, item: TokenStream) -> TokenStream {
         .into()
     } else {
         quote::quote! {
+            //! Fake main.
+
             #![feature(prelude_import)]
             #![allow(internal_features)]
 
@@ -55,6 +57,7 @@ pub fn cfg_(attr: TokenStream, item: TokenStream) -> TokenStream {
             #[prelude_import]
             use std::prelude::v1::*;
 
+            /// Fake main.
             fn main() {
                 unimplemented!(#attr_text);
             }
